@@ -4,7 +4,7 @@
 let headerScroll = document.getElementById("homepage--header")
 let arrowUpScroll = document.querySelector(".homepage--upButton")
 
-window.onscroll = function () {
+window.onscroll = function() {
     if (document.documentElement.scrollTop > 0) {
         headerScroll.className = "scrollHeader"
         arrowUpScroll.className = "homepage--upButton active"
@@ -143,7 +143,7 @@ let homepageModal = document.querySelector(".homepage--modal")
 
 function showHomepageModal() {
     homepageModal.style.display = "flex"
-    // Khó quá nên đi cop cho nó hoạt động chứ ko hiểu gì
+        // Khó quá nên đi cop cho nó hoạt động chứ ko hiểu gì
     if ($(document).height() > $(window).height()) {
         let scrollTop = ($('html').scrollTop()) ? $('html').scrollTop() : $('body').scrollTop(); // Works for Chrome, Firefox, IE...
         $('html').addClass('noscroll').css('top', -scrollTop);
@@ -234,7 +234,7 @@ function getUser() {
 
 function searchAction(thamso) {
     console.log(thamso);
-    window.location.href = "../Trang_Shop/index.html"
+    window.location.href = "./Trang_Shop/index.html"
     let userSearchName = [];
     let userSearchInput = JSON.parse(localStorage.getItem('userInput'));
     for (let i = 0; i < products.length; i++) {
